@@ -44,20 +44,15 @@ register("command", (...args) => {
       ChatLib.chat("§cDidn't provide an Name.")
     }
   } else if (args[0] == "list") {
-    string = ""
-    if (data.names.length = 0) {
-      string = "§cNone"
-    } else {
-      string = "§2Mod currently checks for:\n"
-      for (let i = 0; i < data.names.length; i++) {
-        if (i != data.names.length) {
-          string = string + "§a" + data.names[i] + ", "
-        } else {
-          string = string + "§a" + data.names[i]
-        }
+    string = "§2Mod currently checks for:\n"
+    for (let i = 0; i < data.names.length; i++) {
+      if (i != data.names.length - 1) {
+        string = string + "§a" + data.names[i] + ", "
+      } else {
+        string = string + "§a" + data.names[i]
       }
-      ChatLib.chat(string)
     }
+    ChatLib.chat(string)
   } else {
     ChatLib.chat("§cUsage: /bread add/remove/list")
   }
