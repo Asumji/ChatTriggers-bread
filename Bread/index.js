@@ -2,7 +2,7 @@
 import PogObject from "PogData";
 
 const data = new PogObject("Bread", {
-  names: ["zhadow_t"],
+  names: [],
 });
 data.save();
 
